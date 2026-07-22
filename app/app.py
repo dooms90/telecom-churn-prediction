@@ -1,11 +1,12 @@
 import streamlit as st
 import pandas as pd
 import joblib
-from sklearn.preprocessing import LabelEncoder
 import os
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 model = joblib.load(os.path.join(BASE_DIR, '..', 'models', 'churn_model_extended.pkl'))
 top_features = joblib.load(os.path.join(BASE_DIR, '..', 'models', 'extended_features.pkl'))
+encoding_maps = joblib.load(os.path.join(BASE_DIR, '..', 'models', 'encoding_maps.pkl'))
 
 st.set_page_config(page_title="Telecom Churn Prediction", page_icon="📊")
 st.title("📊 Telecom Customer Churn Prediction")
@@ -32,26 +33,23 @@ with col2:
     ])
 
 if st.button("Predict Churn"):
+    senior_val = 1 if senior == "Yes" else 0
+
     input_dict = {
         'tenure': tenure,
-        'Contract': contract,
+        'Contract': encoding_maps['Contract'][contract],
         'MonthlyCharges': monthly_charges,
         'TotalCharges': total_charges,
-        'InternetService': internet_service,
-        'OnlineSecurity': online_security,
-        'TechSupport': tech_support,
-        'PaymentMethod': payment_method,
-        'gender': gender,
-        'SeniorCitizen': senior,
-        'Partner': partner,
-        'Dependents': dependents
+        'InternetService': encoding_maps['InternetService'][internet_service],
+        'OnlineSecurity': encoding_maps['OnlineSecurity'][online_security],
+        'TechSupport': encoding_maps['TechSupport'][tech_support],
+        'PaymentMethod': encoding_maps['PaymentMethod'][payment_method],
+        'gender': encoding_maps['gender'][gender],
+        'SeniorCitizen': senior_val,
+        'Partner': encoding_maps['Partner'][partner],
+        'Dependents': encoding_maps['Dependents'][dependents]
     }
     input_df = pd.DataFrame([input_dict])
-
-    for col in input_df.select_dtypes(include='object').columns:
-        le = LabelEncoder()
-        input_df[col] = le.fit_transform(input_df[col])
-
     input_df = input_df[top_features]
 
     prediction = model.predict(input_df)[0]
