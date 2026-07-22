@@ -2,9 +2,10 @@ import streamlit as st
 import pandas as pd
 import joblib
 from sklearn.preprocessing import LabelEncoder
-
-model = joblib.load('../models/churn_model_extended.pkl')
-top_features = joblib.load('../models/extended_features.pkl')
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model = joblib.load(os.path.join(BASE_DIR, '..', 'models', 'churn_model_extended.pkl'))
+top_features = joblib.load(os.path.join(BASE_DIR, '..', 'models', 'extended_features.pkl'))
 
 st.set_page_config(page_title="Telecom Churn Prediction", page_icon="📊")
 st.title("📊 Telecom Customer Churn Prediction")
