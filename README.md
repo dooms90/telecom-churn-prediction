@@ -70,6 +70,7 @@ Get an instant churn prediction with probability score
 View results in a clear, visual format
 
 ☁️ Stage 5: Deployment
+<br>
 The application is deployed and publicly accessible via Render, connected directly to this GitHub repository for continuous deployment — any update pushed to the main branch automatically redeploys the live app.
 
 ## 🛠️ Tech Stack
