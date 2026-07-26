@@ -10,12 +10,12 @@ Customer churn — when a customer stops using a company's service — is a majo
 
 The project follows a 5-stage pipeline:
 
-Stage	Description
-1️- Data Understanding & EDA	Explore the raw dataset and identify key churn drivers
-2️- Data Preprocessing & Feature Engineering	Clean data, encode features, handle class imbalance
-3️- Model Development & Optimization	Train, compare, and tune ML models
-4️- Application Development	Build an interactive prediction web app with Streamlit
-5️-Deployment & Serving	Deploy the app live on the web (Render)
+""Stage	Description
+- Data Understanding & EDA	Explore the raw dataset and identify key churn drivers
+- Data Preprocessing & Feature Engineering	Clean data, encode features, handle class imbalance
+- Model Development & Optimization	Train, compare, and tune ML models
+- Application Development	Build an interactive prediction web app with Streamlit
+-Deployment & Serving	Deploy the app live on the web (Render)
 
 🗂️ Project Structure
 telecom-churn/
