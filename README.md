@@ -72,11 +72,16 @@ View results in a clear, visual format
 ☁️ Stage 5: Deployment
 The application is deployed and publicly accessible via Render, connected directly to this GitHub repository for continuous deployment — any update pushed to the main branch automatically redeploys the live app.
 
-🛠️ Tech Stack
-Language: Python
-Data Analysis: pandas, numpy, matplotlib, seaborn
-Machine Learning: scikit-learn, imbalanced-learn (SMOTE)
-Hyperparameter Tuning: Optuna
-Web Framework: Streamlit
-Deployment: Render
-Version Control: Git & GitHub
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| **Programming Language** | Python |
+| **Data Analysis** | pandas, numpy |
+| **Data Visualization** | matplotlib, seaborn |
+| **Machine Learning** | scikit-learn |
+| **Imbalanced Data Handling** | imbalanced-learn (SMOTE) |
+| **Hyperparameter Tuning** | Optuna |
+| **Web Framework** | Streamlit |
+| **Deployment** | Render |
+| **Version Control** | Git & GitHub |
