@@ -44,6 +44,7 @@ Services: internet service, online security, tech support
 Billing: monthly charges, total charges
 
 🔍 Stage 1: Exploratory Data Analysis
+<br>
 Analyzed churn distribution (~27% churn rate — an imbalanced dataset)
 Identified key churn drivers:
 Customers on month-to-month contracts churn significantly more than those on 1–2 year contracts
@@ -51,12 +52,14 @@ Low-tenure (newer) customers are at higher risk of churning
 Higher monthly charges correlate with increased churn
 
 🧹 Stage 2: Data Preprocessing & Feature Engineering
+<br>
 Removed non-predictive identifier columns
 Converted and cleaned improperly typed numeric fields
 Encoded categorical variables into numeric form
 Addressed class imbalance using SMOTE (Synthetic Minority Over-sampling Technique)
 
 🤖 Stage 3: Model Development & Optimization
+<br>
 Trained and compared multiple models: Logistic Regression, Decision Tree, and Random Forest
 Selected Random Forest as the best-performing model
 Tuned hyperparameters using Optuna for optimal performance
@@ -64,6 +67,7 @@ Simplified the final feature set to the most important predictors for a cleaner 
 Evaluation metrics used: Accuracy, Precision, Recall, F1 Score
 
 💻 Stage 4: Application Development
+<br>
 Built an interactive web application using Streamlit, allowing users to:
 Input customer details through a simple form
 Get an instant churn prediction with probability score
