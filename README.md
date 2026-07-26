@@ -35,9 +35,7 @@ telecom-churn/
 Source: Telco Customer Churn Dataset (Kaggle)
 The dataset contains customer-level information including demographics, account details, subscribed services, billing information, and whether the customer churned.
 
-
 Key features used:
-
 Customer profile: gender, senior citizen status, partner, dependents
 Account details: tenure, contract type, payment method
 Services: internet service, online security, tech support
