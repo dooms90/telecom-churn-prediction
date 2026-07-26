@@ -10,7 +10,7 @@ Customer churn — when a customer stops using a company's service — is a majo
 
 The project follows a 5-stage pipeline:
 
-""Stage	Description
+Stage	Description
 - Data Understanding & EDA	Explore the raw dataset and identify key churn drivers
 - Data Preprocessing & Feature Engineering	Clean data, encode features, handle class imbalance
 - Model Development & Optimization	Train, compare, and tune ML models
