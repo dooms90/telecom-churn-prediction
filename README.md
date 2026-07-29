@@ -5,7 +5,6 @@ An end-to-end machine learning project that predicts whether a telecom customer 
 🔗 Live Demo: telecom-churn-prediction-k5z3.onrender.com
 
 Project Overview
-
 Customer churn — when a customer stops using a company's service — is a major concern for telecom providers. This project builds a machine learning model to predict churn risk in advance, so businesses can take proactive retention action.
 
 The project follows a 5-stage pipeline:
