@@ -90,7 +90,7 @@ View results in a clear, visual format
 <br>
 The application is deployed and publicly accessible via Render, connected directly to this GitHub repository for continuous deployment — any update pushed to the main branch automatically redeploys the live app.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Technologies |
 |----------|--------------|
