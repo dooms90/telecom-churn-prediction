@@ -17,7 +17,7 @@ Stage	Description
 - Application Development	Build an interactive prediction web app with Streamlit
 -Deployment & Serving	Deploy the app live on the web (Render)
 
-🗂️ Project Structure
+Project Structure
 telecom-churn/
 ├── data/                  
 ├── notebooks/
@@ -31,11 +31,11 @@ telecom-churn/
 ├── runtime.txt               
 └── README.md
 
-📊 Dataset
+Dataset
 Source: Telco Customer Churn Dataset (Kaggle)
 The dataset contains customer-level information including demographics, account details, subscribed services, billing information, and whether the customer churned.
 
-## 📊 Key Features Used
+## Key Features Used
 
 - **Customer Profile**
   - Gender
@@ -57,7 +57,7 @@ The dataset contains customer-level information including demographics, account 
   - Monthly Charges
   - Total Charges
 
-🔍 Stage 1: Exploratory Data Analysis
+1-Stage 1: Exploratory Data Analysis
 <br>
 Analyzed churn distribution (~27% churn rate — an imbalanced dataset)
 Identified key churn drivers:
@@ -65,14 +65,14 @@ Customers on month-to-month contracts churn significantly more than those on 1�
 Low-tenure (newer) customers are at higher risk of churning
 Higher monthly charges correlate with increased churn
 
-🧹 Stage 2: Data Preprocessing & Feature Engineering
+2-Stage 2: Data Preprocessing & Feature Engineering
 <br>
 Removed non-predictive identifier columns
 Converted and cleaned improperly typed numeric fields
 Encoded categorical variables into numeric form
 Addressed class imbalance using SMOTE (Synthetic Minority Over-sampling Technique)
 
-🤖 Stage 3: Model Development & Optimization
+3-Stage 3: Model Development & Optimization
 <br>
 Trained and compared multiple models: Logistic Regression, Decision Tree, and Random Forest
 Selected Random Forest as the best-performing model
@@ -80,14 +80,14 @@ Tuned hyperparameters using Optuna for optimal performance
 Simplified the final feature set to the most important predictors for a cleaner user experience
 Evaluation metrics used: Accuracy, Precision, Recall, F1 Score
 
-💻 Stage 4: Application Development
+4-Stage 4: Application Development
 <br>
 Built an interactive web application using Streamlit, allowing users to:
 Input customer details through a simple form
 Get an instant churn prediction with probability score
 View results in a clear, visual format
 
-☁️ Stage 5: Deployment
+5-Stage 5: Deployment
 <br>
 The application is deployed and publicly accessible via Render, connected directly to this GitHub repository for continuous deployment — any update pushed to the main branch automatically redeploys the live app.
 
